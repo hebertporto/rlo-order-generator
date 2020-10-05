@@ -5,9 +5,9 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
+    title: `Randomizer`,
+    description: `Randomizer Helper for RLO Team`,
+    author: `@hebertporto`,
   },
   plugins: [
     `gatsby-plugin-eslint`,
@@ -37,5 +37,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-alias-imports`,
+      options: {
+        rootFolder: `src`
+      }
+    },
   ],
 };

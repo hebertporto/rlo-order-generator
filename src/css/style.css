@@ -3,3 +3,19 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: rgb(54, 112, 199);
+}
+
+.toggle__dot {
+  top: -.25rem;
+  left: -.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+input:checked~.toggle__dot {
+  transform: translateX(100%);
+  background-color: rgb(288, 37, 37);
+}

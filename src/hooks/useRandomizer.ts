@@ -9,6 +9,7 @@ interface IuseRandomizerProps {
   getRandomOrder: () => void;
   copyToClipboard: (items: any) => void;
   updateIsMissing: (memberName: string) => void;
+  isListCopied: boolean;
 }
 
 const rloTeam = [
@@ -32,6 +33,9 @@ const rloTeam = [
 const useRandomizer = (): IuseRandomizerProps => {
   const [list, setList] = useState(rloTeam);
   const [standupOrderList, setStandupOrderList] = useState([]);
+  const [isListCopied, setIsListCopied] = useState(false);
+
+  const clearCopiedMessage = () => setIsListCopied(false);
 
   const updateIsMissing = (memberName) => {
     const updatedList = list.map(({ name, isMissing }) => {
@@ -43,7 +47,7 @@ const useRandomizer = (): IuseRandomizerProps => {
     setList(updatedList);
   };
 
-  const selectisMissing = () => rloTeam.filter((person) => !person.isMissing);
+  const selectisMissing = () => list.filter((person) => !person.isMissing);
 
   const getAlphabeticalOrder = () =>
     setStandupOrderList(orderBy(selectisMissing(), "name", "asc"));
@@ -52,7 +56,7 @@ const useRandomizer = (): IuseRandomizerProps => {
 
   const copyToClipboard = (items) => {
     const nameList = [];
-    items.forEach((child, index) => {
+    items.forEach((child) => {
       nameList.push(`${child.textContent}\n`);
     });
 
@@ -62,6 +66,8 @@ const useRandomizer = (): IuseRandomizerProps => {
     el.select();
     document.execCommand("copy");
     document.body.removeChild(el);
+    setIsListCopied(true);
+    setInterval(() => setIsListCopied(false), 4000);
   };
 
   return {
@@ -71,6 +77,7 @@ const useRandomizer = (): IuseRandomizerProps => {
     getRandomOrder,
     copyToClipboard,
     updateIsMissing,
+    isListCopied,
   };
 };
 

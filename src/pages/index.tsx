@@ -10,6 +10,7 @@ function IndexPage() {
     copyToClipboard,
     standupOrderList,
     updateIsMissing,
+    isListCopied,
   } = useRandomizer();
 
   const handleCopyList = () =>
@@ -66,12 +67,12 @@ function IndexPage() {
         <div className="flex-1 flex flex-col items-center">
           <button
             onClick={handleCopyList}
-            className={`w-40 rounded-lg bg-blue-500 text-sm text-white px-3 py-2 outline-none ${
+            className={`w-40 rounded-lg text-sm text-white px-3 py-2 outline-none ${
               standupOrderList.length ? "" : "cursor-not-allowed opacity-50"
-            }`}
+            } ${isListCopied ? "bg-teal-500" : "bg-blue-500"}`}
             disabled={!standupOrderList.length}
           >
-            Copy to Clipboard
+            {isListCopied ? "List Copied!" : "Copy to Clipboard"}
           </button>
           {standupOrderList.length ? (
             <>

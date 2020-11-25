@@ -14,7 +14,6 @@ interface IuseRandomizerProps {
 
 const rloTeam = [
   { isMissing: false, name: "Hebert" },
-  { isMissing: false, name: "Lucas" },
   { isMissing: false, name: "Thiago" },
   { isMissing: false, name: "Ribamar" },
   { isMissing: false, name: "Nico" },
@@ -26,8 +25,9 @@ const rloTeam = [
   { isMissing: false, name: "Vlad" },
   { isMissing: false, name: "Bode" },
   { isMissing: true, name: "Sandra" },
+  { isMissing: true, name: "Lucas" },
   { isMissing: true, name: "Deepanshu" },
-  { isMissing: true, name: "Rafael" },
+  { isMissing: true, name: "Felipe" },
 ];
 
 const useRandomizer = (): IuseRandomizerProps => {

@@ -20,7 +20,7 @@ function IndexPage() {
     <Layout>
       <h1 className="text-center text-4xl font-semibold">
         Standup Order Generator{" "}
-        <small className="text-gray-500 text-sm">1.0</small>
+        <small className="text-gray-500 text-sm">1.1</small>
       </h1>
       <section className=" flex flex-row mt-8">
         <div className="flex-1 flex flex-col items-center">

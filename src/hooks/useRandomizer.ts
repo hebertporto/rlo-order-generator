@@ -14,12 +14,10 @@ interface IuseRandomizerProps {
 
 const rloTeam = [
   { isMissing: false, name: "Hebert" },
-  { isMissing: false, name: "Thiago" },
   { isMissing: false, name: "Ribamar" },
   { isMissing: false, name: "Nico" },
   { isMissing: false, name: "Courtney" },
   { isMissing: false, name: "Eduard" },
-  { isMissing: false, name: "Gustavo" },
   { isMissing: false, name: "Giuliano" },
   { isMissing: false, name: "Vlad" },
   { isMissing: false, name: "Bode" },
@@ -34,8 +32,6 @@ const useRandomizer = (): IuseRandomizerProps => {
   const [list, setList] = useState(rloTeam);
   const [standupOrderList, setStandupOrderList] = useState([]);
   const [isListCopied, setIsListCopied] = useState(false);
-
-  const clearCopiedMessage = () => setIsListCopied(false);
 
   const updateIsMissing = (memberName) => {
     const updatedList = list.map(({ name, isMissing }) => {

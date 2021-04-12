@@ -24,6 +24,8 @@ const rloTeam = [
   { isMissing: false, name: "Isabelle" },
   { isMissing: false, name: "Kyle" },
   { isMissing: false, name: "Diogo" },
+  { isMissing: false, name: "Sai" },
+  { isMissing: false, name: "Vandana" },
   { isMissing: true, name: "Sandra" },
   { isMissing: true, name: "Lucas" },
   { isMissing: true, name: "Deepanshu" },

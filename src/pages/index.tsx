@@ -20,7 +20,7 @@ function IndexPage() {
     <Layout>
       <h1 className="text-center text-4xl font-semibold">
         Standup Order Generator{" "}
-        <small className="text-gray-500 text-sm">1.1.7</small>
+        <small className="text-gray-500 text-sm">1.1.8</small>
       </h1>
       <section className=" flex flex-row mt-8">
         <div className="flex-1 flex flex-col items-center">
@@ -67,9 +67,8 @@ function IndexPage() {
         <div className="flex-1 flex flex-col items-center">
           <button
             onClick={handleCopyList}
-            className={`w-40 rounded-lg text-sm text-white px-3 py-2 outline-none ${
-              standupOrderList.length ? "" : "cursor-not-allowed opacity-50"
-            } ${isListCopied ? "bg-teal-500" : "bg-blue-500"}`}
+            className={`w-40 rounded-lg text-sm text-white px-3 py-2 outline-none ${standupOrderList.length ? "" : "cursor-not-allowed opacity-50"
+              } ${isListCopied ? "bg-teal-500" : "bg-blue-500"}`}
             disabled={!standupOrderList.length}
           >
             {isListCopied ? "List Copied!" : "Copy to Clipboard"}

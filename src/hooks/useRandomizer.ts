@@ -13,20 +13,17 @@ interface IuseRandomizerProps {
 }
 
 const rloTeam = [
-  { isMissing: false, name: "Hebert" },
+  { isMissing: false, name: "Lindsey" },
   { isMissing: false, name: "Ribamar" },
-  { isMissing: false, name: "Nico" },
   { isMissing: false, name: "Courtney" },
   { isMissing: false, name: "Giuliano" },
   { isMissing: false, name: "Vlad" },
-  { isMissing: true, name: "Bode" },
   { isMissing: false, name: "Isabelle" },
   { isMissing: false, name: "Kyle" },
   { isMissing: false, name: "Diogo" },
   { isMissing: false, name: "Sai" },
   { isMissing: false, name: "Vandana" },
-  { isMissing: true, name: "Sandra" },
-  { isMissing: true, name: "Lucas" },
+  { isMissing: false, name: "Hebert" },
   { isMissing: true, name: "Deepanshu" },
   { isMissing: true, name: "Felipe" },
 ];
